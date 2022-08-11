@@ -24,10 +24,10 @@ $ dagger --log-format=plain do echo
 ### 実行結果 (image 指定 ver)
 ```
 $ dagger --log-format=plain do echoOnUbuntu
-4:09PM INFO  actions._ubuntu._pull | computing
+4:09PM INFO  actions.echoOnUbuntu._ubuntu._pull | computing
 4:09PM INFO  actions.echoOnUbuntu.script._write | computing
 4:09PM INFO  actions.echoOnUbuntu.script._write | completed    duration=0s
-4:09PM INFO  actions._ubuntu._pull | completed    duration=1s
+4:09PM INFO  actions.echoOnUbuntu._ubuntu._pull | completed    duration=1s
 4:09PM INFO  actions.echoOnUbuntu._exec | computing
 4:09PM INFO  actions.echoOnUbuntu._exec | #4 0.082 Hello World!
 4:09PM INFO  actions.echoOnUbuntu._exec | completed    duration=100ms

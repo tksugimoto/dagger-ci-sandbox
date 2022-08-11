@@ -16,14 +16,14 @@ dagger.#Plan & {
 			"""#
 		}
 		echoOnUbuntu: bash.#Run & {
+			_ubuntu: docker.#Pull & {
+				source: "ubuntu:latest"
+			}
 			input: _ubuntu.output
 			always: true
 			script: contents: #"""
 				echo "Hello World!"
 			"""#
-		}
-		_ubuntu: docker.#Pull & {
-			source: "ubuntu:latest"
 		}
 	}
 }
