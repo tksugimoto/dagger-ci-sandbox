@@ -9,11 +9,11 @@ dagger --log-format=plain do lsCat
 ### 実行結果
 ```
 $ dagger --log-format=plain do lsCat
-4:48PM INFO  actions.lsCat._source | computing
+4:48PM INFO  client.filesystem.".".read | computing
 4:48PM INFO  actions.lsCat.script._write | computing
 4:48PM INFO  actions.lsCat._simpleImage._dag."0"._pull | computing
 4:48PM INFO  actions.lsCat.script._write | completed    duration=0s
-4:48PM INFO  actions.lsCat._source | completed    duration=0s
+4:48PM INFO  client.filesystem.".".read | completed    duration=0s
 4:48PM INFO  actions.lsCat._simpleImage._dag."0"._pull | completed    duration=100ms
 4:48PM INFO  actions.lsCat._simpleImage._dag."1"._exec | computing
 4:48PM INFO  actions.lsCat._simpleImage._dag."1"._exec | completed    duration=0s
@@ -38,5 +38,5 @@ $ dagger --log-format=plain do lsCat
     - GitHub: [dagger/bash.cue at v0.2.23 · dagger/dagger](https://github.com/dagger/dagger/blob/v0.2.23/pkg/universe.dagger.io/bash/bash.cue)
 - [universe.dagger.io/docker/run.cue](cue.mod/pkg/universe.dagger.io/docker/run.cue)
     - GitHub: [dagger/run.cue at v0.2.23 · dagger/dagger](https://github.com/dagger/dagger/blob/v0.2.23/pkg/universe.dagger.io/docker/run.cue)
-- [dagger.io/dagger/core/fs.cue](cue.mod/pkg/dagger.io/dagger/core/fs.cue)
-    - GitHub: [dagger/run.cue at v0.2.23 · dagger/dagger](https://github.com/dagger/dagger/blob/v0.2.23/pkg/dagger.io/dagger/core/fs.cue)
+- [dagger.io/dagger/plan.cue](cue.mod/pkg/dagger.io/dagger/plan.cue)
+    - GitHub: [dagger/plan.cue at v0.2.23 · dagger/dagger](https://github.com/dagger/dagger/blob/v0.2.23/pkg/dagger.io/dagger/plan.cue)

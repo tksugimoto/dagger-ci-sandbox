@@ -2,7 +2,6 @@ package main
 
 import (
 	"dagger.io/dagger"
-	"dagger.io/dagger/core"
 	"universe.dagger.io/bash"
 )
 
@@ -24,16 +23,16 @@ dagger.#Plan & {
 			mounts: {
 				Source: {
 					dest: workdir
-					contents: _source.output
+					contents: client.filesystem.".".read.contents
 				}
 			}
-
-			_source: core.#Source & {
-				path: "."
-				include: [
-					"hello.txt",
-				]
-			}
+		}
+	}
+	client: filesystem: ".": {
+		read: {
+			include: [
+				"hello.txt",
+			]
 		}
 	}
 }
