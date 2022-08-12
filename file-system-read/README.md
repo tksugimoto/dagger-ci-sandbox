@@ -20,13 +20,13 @@ $ dagger --log-format=plain do lsCat
 4:48PM INFO  actions.lsCat._exec | computing
 4:48PM INFO  actions.lsCat._exec | completed    duration=200ms
 4:48PM INFO  actions.lsCat._exec | #7 0.102 $ pwd
-4:48PM INFO  actions.lsCat._exec | #7 0.102 /
-4:48PM INFO  actions.lsCat._exec | #7 0.102 $ ls -la /src/
+4:48PM INFO  actions.lsCat._exec | #7 0.102 /workdir42
+4:48PM INFO  actions.lsCat._exec | #7 0.102 $ ls -la ./
 4:48PM INFO  actions.lsCat._exec | #7 0.103 total 12
 4:48PM INFO  actions.lsCat._exec | #7 0.103 drwxr-xr-x    1 root     root          4096 Aug 12 07:48 .
 4:48PM INFO  actions.lsCat._exec | #7 0.103 drwxr-xr-x    1 root     root          4096 Aug 12 07:48 ..
 4:48PM INFO  actions.lsCat._exec | #7 0.103 -rwxr-xr-x    1 root     root            23 Aug 12 07:36 hello.txt
-4:48PM INFO  actions.lsCat._exec | #7 0.104 $ cat "/src/hello.txt"
+4:48PM INFO  actions.lsCat._exec | #7 0.104 $ cat "./hello.txt"
 4:48PM INFO  actions.lsCat._exec | #7 0.105 Hello World
 4:48PM INFO  actions.lsCat._exec | #7 0.105 foo
 4:48PM INFO  actions.lsCat._exec | #7 0.105 bar

@@ -14,15 +14,16 @@ dagger.#Plan & {
 				echo '$ pwd'
 				pwd
 
-				echo '$ ls -la /src/'
-				ls -la /src/
+				echo '$ ls -la ./'
+				ls -la ./
 
-				echo '$ cat "/src/hello.txt"'
-				cat "/src/hello.txt"
+				echo '$ cat "./hello.txt"'
+				cat "./hello.txt"
 			"""#
+			workdir: "/workdir42" // 42 は区別用
 			mounts: {
 				Source: {
-					dest: "/src"
+					dest: workdir
 					contents: _source.output
 				}
 			}
